@@ -27,7 +27,7 @@
 
 
 import React from "react";
-import OmdbContainer from "./components/OmdbContainer";
+import OmdbContainer from "./components/OldFiles/OmdbContainer";
 
 function App() {
   return <OmdbContainer />;
