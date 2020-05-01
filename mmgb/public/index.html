@@ -29,8 +29,7 @@
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Youtube related Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+   
     <style>
       .paginate {
           margin-right: 5px;
@@ -48,32 +47,6 @@
     <title>React App</title>
   </head>
   <body>
-    <!-- Youtube form -->
-    <form id="yt-form">
-      <p><input type="text" id="keyword-input" placeholder="Enter keyword" required></p>
-      <p><input type="number" id="maxresult-input" placeholder="Max Results" min="1" max="50" required></p>
-      <p>
-          <select id="order-input" required>
-              <option value="">--SELECT ORDER--</option>
-              <option value="date">Date</option>
-              <option value="rating">Rating</option>
-              <option value="relevance">Relevance</option>
-              <option value="title">Title</option>
-              <option value="viewCount" selected>View Count</option>
-          </select>
-      </p>
-      <p>
-          <input type="submit" value="Submit">
-      </p>
-  </form>
-
-  <div id="videoListContainer"></div>
-  <br></br>
-
-  <script src="https://apis.google.com/js/api.js"></script>
-  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
-  <script src="script.js"></script>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
