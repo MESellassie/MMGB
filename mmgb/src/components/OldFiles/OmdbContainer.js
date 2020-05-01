@@ -7,6 +7,7 @@ import SearchForm from "./SearchForm";
 import MovieDetail from "./MovieDetail";
 import API from "../utils/API";
 
+
 class OmdbContainer extends Component {
   state = {
     result: {},
@@ -69,6 +70,15 @@ class OmdbContainer extends Component {
             </Card>
           </Col>
         </Row>
+        <br></br>
+          <br></br>
+          <Row>
+          <Col size="md-8">
+            <Card>
+                {/* <Youtube></Youtube> */}
+            </Card>
+            </Col>
+            </Row>
       </Container>
     );
   }
