@@ -27,10 +27,10 @@
 
 
 import React from "react";
-import OmdbContainer from "./components/OmdbContainer";
+import MMGB from "../src/components/NewFiles/pages/MMGB";
 
 function App() {
-  return <OmdbContainer />;
+  return <MMGB />;
 }
 
 export default App;
