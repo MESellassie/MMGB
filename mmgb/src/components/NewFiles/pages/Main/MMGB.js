@@ -2,7 +2,9 @@ import React from "react";
 import Container from "../Container";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
+import Footer from "../Footer";
 import "../Main/style.css";
+
 
 function MMGB() {
     return (
@@ -11,6 +13,7 @@ function MMGB() {
             <Container>
                 <Sidebar></Sidebar>
             </Container>
+            <Footer></Footer>
         </div>
     );
 
