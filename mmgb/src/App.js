@@ -27,7 +27,7 @@
 
 
 import React from "react";
-import MMGB from "../src/components/NewFiles/pages/MMGB";
+import MMGB from "../src/components/NewFiles/pages/Main/MMGB";
 
 function App() {
   return <MMGB />;

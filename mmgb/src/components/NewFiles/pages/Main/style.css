@@ -1,0 +1,23 @@
+#navbar {
+    background-color: rgb(75, 56, 143);
+}
+
+#sidebar {
+    background-color: rgb(157, 216, 216);
+    padding-bottom: 10px;
+}
+
+.plug {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-title {
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.card-body {
+    
+}
