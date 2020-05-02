@@ -2,6 +2,22 @@
     background-color: rgb(75, 56, 143);
 }
 
+.nav {
+    color: white;
+}
+
+.nav-link {
+    color: gray;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.navBreak {
+    padding-top: 6px;
+}
+
 
 #sidebar {
     background-color: rgb(157, 216, 216);
@@ -14,13 +30,31 @@
 
 #mainBody {
     position: relative;
-    background-image: linear-gradient(to top right, rgb(87, 87, 87), rgb(136, 167, 168));
+    background-image: linear-gradient(to top right,rgb(48, 47, 47), rgb(87, 87, 87), rgb(136, 167, 168));
+}
+
+#MMGBlogo {
+    padding: 20px;
 }
 
 .plug {
     color: white;
     font-size: 25px;
     text-align: center;
+}
+
+
+.btn {
+    padding: 0;
+    opacity: .4;
+}
+
+.btn:hover {
+    opacity: 1;
+    transition: opacity .9 ease-out;
+    -moz-transition: opacity .9s ease-out;
+    -webkit-transition: opacity .9s ease-out;
+    -o-transition: opacity .9s ease-out;
 }
 
 .card-title {
@@ -39,12 +73,12 @@
     border-radius: 35px;
 }
 
-.sticky-footer{
+.page-footer{
     width: 100%;
-    height: 10%;
+    height: 5%;
     background: rgb(75, 56, 143);
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     text-align: center;
     color: white;
     /* padding-top: 12px;
