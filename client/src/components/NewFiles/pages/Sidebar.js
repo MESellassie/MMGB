@@ -58,7 +58,7 @@ class Sidebar extends Component {
     componentDidMount(){
         const query = "Joker";
         API.random(query)
-            .then(props => console.log(props))
+            .then(res => console.log("This is poop:" + res))
             .catch(err => console.log(err));
     }
 
@@ -77,8 +77,8 @@ class Sidebar extends Component {
                         <br></br>
                      <Card></Card>
                      <br></br>
-                     <Card></Card>
-                         {this.props.children}
+                     <Card><h1>This thing works</h1>{this.props.children}</Card>
+                         
                     </div>
                     <Body></Body>
                     
