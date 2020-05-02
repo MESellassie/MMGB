@@ -5,7 +5,12 @@ import Row from "./Row";
 function Body(props) {
     return (
                 <div className="col-sm-10" id="mainBody">
-                    Place the body info logo, etc. here !
+                    <br></br>
+                    <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/Untitled.png?raw=true" class="card-img" alt="..." id="MMGBlogo"></img>  
+                    <Row>
+                        
+                    </Row>
+
                 {props.children}
                 </div>
     );
