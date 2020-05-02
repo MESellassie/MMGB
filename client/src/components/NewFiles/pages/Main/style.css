@@ -17,6 +17,10 @@
     background-image: linear-gradient(to top right, rgb(87, 87, 87), rgb(136, 167, 168));
 }
 
+#MMGBlogo {
+    padding: 20px;
+}
+
 .plug {
     color: white;
     font-size: 25px;
