@@ -9,7 +9,7 @@ function Card(props) {
                 </div>
                 <div className="col-md-8" id="cardImg">
                     <div className="Card-body">
-                    <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/BlankImageBox.png?raw=true" class="card-img" alt="..."></img>  
+                    <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/BlankImageBox.png?raw=true" class="card-img" alt="..."></img>  
                     </div>
                 </div>
             </div>
