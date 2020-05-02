@@ -29,8 +29,26 @@
 import React from "react";
 import OmdbContainer from "./components/OmdbContainer";
 
-function App() {
-  return <OmdbContainer />;
+import Landing from "./components/Landing";
+import Login from "./components/Login";
+import Register from "./components/Register";
+
+render() {
+  return (
+    <Router>
+      <div className="App">
+        <Route exact path="/" component={Landing} />
+        <div className="container">
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
+        </div>
+      </div>
+    </Router>
+  )
 }
+
+// function App() {
+//   return <OmdbContainer />;
+// }
 
 export default App;
