@@ -2,6 +2,22 @@
     background-color: rgb(75, 56, 143);
 }
 
+.nav {
+    color: white;
+}
+
+.nav-link {
+    color: gray;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.navBreak {
+    padding-top: 6px;
+}
+
 
 #sidebar {
     background-color: rgb(157, 216, 216);
