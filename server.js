@@ -33,14 +33,4 @@ app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 
-// class Sidebar extends Component {
-//     state = {
-//         result: {}
-//     };
 
-//     componentDidMount(){
-//         const query = "Joker";
-//         API.random(query)
-//             .then(poop => console.log(poop))
-//             .catch(err => console.log(err));
-//     }
