@@ -1,6 +1,6 @@
 import React from "react";
-import Jumbotron from "./Jumbotron";
-import Row from "./Row";
+// import Jumbotron from "./Jumbotron";
+// import Row from "./Row";
 import Happy from "../Moods/Happy";
 import MoodRow from "./MoodRow";
 import Gloomy from "../Moods/Gloomy";
