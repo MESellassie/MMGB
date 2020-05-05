@@ -6,6 +6,7 @@ import MoodRow from "./MoodRow";
 import Gloomy from "../Moods/Gloomy";
 import Pumped from "../Moods/Pumped";
 import Relaxed from "../Moods/Relaxed";
+import HappyResults from "../Results/HappyResults";
 
 function Body(props) {
     return (
@@ -26,6 +27,5 @@ function Body(props) {
                 {props.children}
                 </div>
     );
-}
-
+}            
 export default Body
