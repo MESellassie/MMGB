@@ -26,7 +26,8 @@
 // export default App;
 
 
-import React from "react";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import MMGB from "../src/components/NewFiles/pages/Main/MMGB";
 
 import Landing from "./components/Landing";
