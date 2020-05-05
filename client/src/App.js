@@ -33,21 +33,25 @@ import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Register from "./components/Register";
 
-render() {
-  return (
-    <Router>
-      <div className="App">
-        <Route exact path="/" component={Landing} />
-        <div className="container">
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Route exact path="/" component={Landing} />
+          <div className="container">
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+          </div>
         </div>
-      </div>
-    </Router>
-  )
-function App() {
-  return <MMGB />;
+      </Router>
+    )
+  }
 }
+
+// function App() {
+//   return <MMGB />;
+// }
 
 // function App() {
 //   return <OmdbContainer />;
