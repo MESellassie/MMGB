@@ -122,6 +122,7 @@ class Sidebar extends Component {
                         <br></br>
                      <Card></Card>
                      <br></br>
+
                      <Card 
                         title={this.state.movieResult.Title}
                         imageSrc={this.state.movieResult.Poster}
@@ -131,6 +132,7 @@ class Sidebar extends Component {
                     <Body></Body>
                     
                 </Row>
+                
             </Jumbotron>
         );
     }

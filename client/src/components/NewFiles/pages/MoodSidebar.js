@@ -8,6 +8,7 @@ function MoodSidebar(props){
         <Jumbotron>
             <Row>
                 <div className="col-sm-2 shadow" id="moodSidebar">
+                    
                     {props.children}
                 </div>
                 <MoodBody></MoodBody>
