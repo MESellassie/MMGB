@@ -77,12 +77,13 @@ class Sidebar extends Component {
                         <br></br>
                      <Card></Card>
                      <br></br>
-                     <Card><h1>This thing works</h1>{this.props.children}</Card>
+                     <Card>{this.props.children}</Card>
                          
                     </div>
                     <Body></Body>
                     
                 </Row>
+                
             </Jumbotron>
         );
     }
