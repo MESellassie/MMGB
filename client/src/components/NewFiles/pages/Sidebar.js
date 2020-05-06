@@ -51,15 +51,60 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-        result: {}
+        movieResult: {},
+        bookResult: {},
+        gameResult: {},
+        musicResult: {}
     };
     }
 
     componentDidMount(){
-        const query = "Joker";
-        API.random(query)
-            .then(res => console.log("This is poop:" + res))
+        this.getMovie();
+    }
+
+    getMovie() {
+        API.random()
+            .then(res => {
+                console.log(res.data.Response);
+                console.log(res.data);
+                if ( res.data.Response == "False" ||
+                    (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH") ) ) 
+                    this.getMovie();
+                else {
+                    this.setState({movieResult: res.data});
+                }
+            })
             .catch(err => console.log(err));
+    }
+
+    getGame(){
+        //do some stuff then setState once we get a response we like
+        API.random()
+            .then(res => {
+                console.log(res.data);
+                this.getGame();
+            })
+            .catch(err => console.log(err));
+    }
+
+    getBook() {
+        //do some stuff then setState once we get a response we like
+        API.random()
+        .then(res => {
+            console.log(res.data);
+
+        })
+        .catch(err => console.log(err));
+    }
+
+    getMusic(){
+        //do some stuff then setState once we get a response we like
+        API.random()
+        .then(res => {
+            console.log(res.data);
+
+        })
+        .catch(err => console.log(err));
     }
 
     render(){
@@ -77,7 +122,11 @@ class Sidebar extends Component {
                         <br></br>
                      <Card></Card>
                      <br></br>
-                     <Card>{this.props.children}</Card>
+
+                     <Card 
+                        title={this.state.movieResult.Title}
+                        imageSrc={this.state.movieResult.Poster}
+                     ></Card>
                          
                     </div>
                     <Body></Body>
