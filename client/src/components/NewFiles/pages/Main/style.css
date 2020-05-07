@@ -60,6 +60,10 @@
     -o-transition: opacity .9s ease-out;
 }
 
+.movieCardResults {
+    
+}
+
 .card-title {
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
