@@ -57,8 +57,27 @@
     -o-transition: opacity .9s ease-out;
 }
 
-.movieCardResults {
+.moodContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     
+}
+
+.movieCardWrapper {
+    background: white;
+}
+
+.musicCardWrapper {
+    background: blue;
+}
+
+.gamesCardWrapper {
+    background: cyan;
+}
+
+.booksCardWrapper {
+    background: yellow;
 }
 
 .card-title {
