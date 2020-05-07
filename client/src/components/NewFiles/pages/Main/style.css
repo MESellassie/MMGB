@@ -18,6 +18,9 @@
     padding-top: 6px;
 }
 
+#logo {
+    /* box-shadow: 2px 2px 4px #000000; */
+}
 
 #sidebar {
     background-color: rgb(157, 216, 216);
