@@ -50,12 +50,8 @@ class App extends Component {
   }
 }
 
-// function App() {
-//   return <MMGB />;
-// }
-
-// function App() {
-//   return <OmdbContainer />;
-// }
+function App() {
+  return <MMGB />;
+}
 
 export default App;
