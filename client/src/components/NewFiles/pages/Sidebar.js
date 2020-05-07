@@ -20,29 +20,29 @@ import API from "../../../utils/OmdbAPI";
     //  }
 
 
-function Sidebar(props) {
-    return (
-        <Jumbotron>
-            <Row>
-                <div className="col-sm-2 shadow" id="sidebar">
-                    <p className="plug">Plug of the Day</p>
-                    <br></br>
-                    <Card></Card>
-                    <br></br>
-                    <Card></Card>
-                    <br></br>
-                    <Card></Card>
-                    <br></br>
-                    <Card></Card>
-                    {props.children}
-                </div>
-                <Body></Body>
+// function Sidebar(props) {
+//     return (
+//         <Jumbotron>
+//             <Row>
+//                 <div className="col-sm-2 shadow" id="sidebar">
+//                     <p className="plug">Plug of the Day</p>
+//                     <br></br>
+//                     <Card></Card>
+//                     <br></br>
+//                     <Card></Card>
+//                     <br></br>
+//                     <Card></Card>
+//                     <br></br>
+//                     <Card></Card>
+//                     {props.children}
+//                 </div>
+//                 <Body></Body>
                 
-            </Row>
-        </Jumbotron>
-    );
+//             </Row>
+//         </Jumbotron>
+//     );
 
-}
+// }
 
 
 
