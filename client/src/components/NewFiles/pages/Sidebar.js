@@ -82,7 +82,7 @@ class Sidebar extends Component {
         API.random()
             .then(res => {
                 console.log(res.data);
-                this.getGame();
+                this.getGame()
             })
             .catch(err => console.log(err));
     }
@@ -116,15 +116,23 @@ class Sidebar extends Component {
                     <div className="col-sm-2 shadow" id="sidebar">
                      <p className="plug">Plug of the Day</p>
                      <br></br>
-                        <Card></Card>
-                        <br></br>
-                        <Card></Card>
-                        <br></br>
-                     <Card></Card>
-                     <br></br>
-                     <Card 
+                        <Card
                         title={this.state.movieResult.Title}
-                        imageSrc={this.state.movieResult.Poster}
+                        imageSrc={this.state.movieResult.Poster}></Card>
+                        <br></br>
+                        <Card
+                        // title = {this.state.musicResult.Artists}
+                        // imageSrc = {this.state.musicResult.Cover}
+                        ></Card>
+                        <br></br>
+                     <Card 
+                    //  title = {this.state.gameResult.Title}
+                    //  imageSrc = {this.state.gameResult.Cover}
+                     ></Card>
+                     <br></br>
+                     <Card
+                    // title = {this.state.bookResult.Author}
+                    // imageSrc = {this.state.bookResult.Covers}
                      ></Card>
                          
                     </div>
