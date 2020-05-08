@@ -2,7 +2,7 @@ import React from "react";
 // import Jumbotron from "./Jumbotron";
 // import Row from "./Row";
 import Happy from "../Moods/Happy";
-import MoodRow from "./MoodRow";
+import MoodRow from "../Moods/MoodRow";
 import Gloomy from "../Moods/Gloomy";
 import Pumped from "../Moods/Pumped";
 import Relaxed from "../Moods/Relaxed";
@@ -36,7 +36,7 @@ class Body extends React.Component {
                             <Pumped></Pumped>
                             <Relaxed></Relaxed>
                         </MoodRow>
-                    </> || this.state.page === 'HappyResults' && <HappyResults />
+                    </> 
 
                 }
 

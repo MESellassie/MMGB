@@ -108,8 +108,11 @@ class Sidebar extends Component {
                             </div>
                             <Body
                                 handlePageChange={this.handlePageChange}
-                                page={this.state.page}></Body></> || this.state.page === 'HappyResults' && <HappyResults />
-                    }
+                                page={this.state.page}></Body></> 
+                                || this.state.page === 'HappyResults' && <HappyResults />
+                                || this.state.page === 'HappyResults' && <HappyResults />
+               // || <404 />
+                 }
                 </Row>
 
             </Jumbotron>
