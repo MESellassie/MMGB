@@ -139,6 +139,7 @@ class Sidebar extends Component {
                     <Body></Body>
                     
                 </Row>
+                
             </Jumbotron>
         );
     }
