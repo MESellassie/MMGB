@@ -57,16 +57,58 @@
     -o-transition: opacity .9s ease-out;
 }
 
-.movieCardResults {
+.moodContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     
 }
 
-.card-title {
+.movieCardWrapper {
+    background: white;
+}
+
+.musicCardWrapper {
+    background: blue;
+}
+
+.gamesCardWrapper {
+    background: cyan;
+}
+
+.booksCardWrapper {
+    background: yellow;
+}
+
+.sidebarCardTitle {
     -ms-transform: rotate(270deg);
     transform: rotate(270deg);
     
+}
+
+.moodCardContainer {
+    text-align: center;
+    margin-top: 10%;
+    border: 2px solid rgb(75, 56, 143);
+    background: rgb(157, 216, 216);
     
 }
+
+#card1 {
+    padding-top: 15px;
+}
+
+
+#card2 {
+    padding-top: 15px;
+}
+
+#card3 {
+}
+
+#card4 {
+}
+
 
 #cardMood {
     border-radius: 35px;
