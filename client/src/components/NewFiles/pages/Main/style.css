@@ -22,9 +22,12 @@
 #sidebar {
     background-color: rgb(157, 216, 216);
     padding-bottom: 10px;
-    /* position: absolute; */
-    /* top: 56px; */
-    /* bottom: 0; */
+    padding-top: 100px;
+}
+
+#moodSidebar {
+    background-color: rgb(157, 216, 216);
+    padding-bottom: 10px;
     padding-top: 100px;
 }
 
@@ -89,9 +92,19 @@
 .moodCardContainer {
     text-align: center;
     margin-top: 10%;
+    margin-bottom: 10%;
     border: 2px solid rgb(75, 56, 143);
-    background: rgb(157, 216, 216);
-    
+    background: rgb(157, 216, 216); 
+}
+
+.moodBody {
+    background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(120, 121, 124), rgb(69, 153, 202));
+}
+
+.moodSidebarTitle {
+    font-size: 20px;
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
 }
 
 #card1 {
