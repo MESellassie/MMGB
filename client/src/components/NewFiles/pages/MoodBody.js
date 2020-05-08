@@ -13,4 +13,4 @@ function MoodBody(props) {
     );
 }
 
-export default MoodBody
+export default MoodBody;

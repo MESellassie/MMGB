@@ -2,7 +2,7 @@ import React from "react";
 import Row from "./Row";
 import Container from "./Container";
 
-function MoodCards() {
+function MoodCards(props) {
     return (
         // <div className="moodContainer">
 
@@ -186,4 +186,4 @@ function MoodCards() {
     )
 }
 
-export default MoodCards
+export default MoodCards;
