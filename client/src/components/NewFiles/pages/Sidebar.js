@@ -50,7 +50,7 @@ class Sidebar extends Component {
         API.random()
             .then(res => {
                 console.log(res.data);
-                this.getGame();
+                this.getGame()
             })
             .catch(err => console.log(err));
     }
@@ -113,6 +113,7 @@ class Sidebar extends Component {
                                 || this.state.page === 'HappyResults' && <HappyResults />
                // || <404 />
                  }
+
                 </Row>
 
             </Jumbotron>
