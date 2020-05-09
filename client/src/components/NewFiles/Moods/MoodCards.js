@@ -1,134 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Card from "../pages/Card";
 
 
-function MoodCards(props) {
+function MoodCards({mood}) {
+    //movie state
+    const [movieState, setMovieState] = useState({
+        responseData: {},
+        title: "",
+        imageUrl: ""
+    })
+    //music state
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
+    //game state
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
+    //book state
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
+
+    useEffect(() => {
+        //1. use our "mood" prop to determine what mood we should be passing to our api calls
+
+        //2. make our four different api calls
+            
+
+        //3. set each of our four states individually based on these API calls (set the appropriate state based on the .then() from any API Call we make)
+    }, [])
+
+
     return (
-        // <div className="moodContainer">
-
-        //     <div className="movieCardWrapper">MOVIES
-        //         <div className="movieBox1">MOVIE 1</div>
-        //         <div className="movieBox2">MOVIE 2</div>
-        //         <div className="movieBox3">MOVIE 3</div>
-        //         <div className="movieBox4">MOVIE 4</div>
-        //     </div>
-
-        //     <div className="musicCardWrapper">MUSIC
-        //         <div className="musicBox1">MUSIC 1</div>
-        //         <div className="musicBox2">MUSIC 2</div>
-        //         <div className="musicBox3">MUSIC 3</div>
-        //         <div className="musicBox4">MUSIC 4</div>
-        //     </div>
-
-        //     <div className="gamesCardWrapper">GAMES
-        //         <div className="gamesBox1">GAMES 1</div>
-        //         <div className="gamesBox2">GAMES 2</div>
-        //         <div className="gamesBox3">GAMES 3</div>
-        //         <div className="gamesBox4">GAMES 4</div>
-        //     </div>
-
-        //     <div className="booksCardWrapper">BOOKS
-        //         <div className="booksBox1">BOOKS 1</div>
-        //         <div className="booksBox2">BOOKS 2</div>
-        //         <div className="booksBox3">BOOKS 3</div>
-        //         <div className="booksBox4">BOOKS 4</div>
-        //         <div className="booksBox4">BOOKS 4</div>
-
-        //     </div>
-        // </div>
-        // ==================================================
-        // <div>
-        // <div className="movieContainer container col-sm-6">
-        //     <div className="row row-cols-1 row-cols-md-2">
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
-
-        //     </div>
-        // </div>
-
-        //  <div className="musicContainer container col-sm-6">
-        //      <div className="row row-cols-1 row-cols-md-2">
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
-
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
-
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
-
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
-
-        //      </div>
-        //  </div>
-
-        //  </div>
-        //  ================================================
         <div className="moodCardContainer container col-md-6 shadow">
             <div className="row row-cols-1 row-cols-md-2">
                 <a href="#" className="moodCardLink">
@@ -137,7 +47,8 @@ function MoodCards(props) {
                         <img src="" class="card-img-top" alt="..."></img>
                         <div className="card-body">
                             <h5 className="card-title">MOVIE</h5>
-                            <p className="card-text">info:</p>
+                            {/* //Link to="/detail" */}
+                            <Card imagSrc={movieState.imageUrl} title={movieState.title}/>
                         </div>
                     </div>
                 </div>

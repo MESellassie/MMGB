@@ -25,11 +25,6 @@
     padding-top: 100px;
 }
 
-#moodSidebar {
-    background-color: rgb(157, 216, 216);
-    padding-bottom: 10px;
-    padding-top: 100px;
-}
 
 #mainBody {
     position: relative;
@@ -101,10 +96,20 @@
     background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(120, 121, 124), rgb(69, 153, 202));
 }
 
-.moodSidebarTitle {
-    font-size: 20px;
+.moodSidebarImage {
+    height: 70%;
+    width: 70%;
+    margin-top: -50px;
+    padding-bottom: 20px;
+    /* font-size: 20px;
     -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
+    transform: rotate(270deg); */
+}
+
+#happyMoodSidebar {
+    background-color: rgb(226, 235, 65);
+    padding-bottom: 10px;
+    padding-top: 100px;
 }
 
 #card1 {

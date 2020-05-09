@@ -6,6 +6,7 @@ import Body from "./Body";
 import { render } from "react-dom";
 import API from "../../../utils/OmdbAPI";
 import HappyResults from "../Results/HappyResults";
+import GloomyResults from "../Results/GloomyResults";
 
 // state = {
 //     result: {}
@@ -109,8 +110,10 @@ class Sidebar extends Component {
                             <Body
                                 handlePageChange={this.handlePageChange}
                                 page={this.state.page}></Body></> 
-                                || this.state.page === 'HappyResults' && <HappyResults />
-                                || this.state.page === 'HappyResults' && <HappyResults />
+                                // || this.state.page === 'HappyResults' && <HappyResults />
+                                // || this.state.page === 'GloomyResults' && <GloomyResults />
+                                // || this.state.page === 'HappyResults' && <HappyResults />
+                                // || this.state.page === 'HappyResults' && <HappyResults />
                // || <404 />
                  }
 
