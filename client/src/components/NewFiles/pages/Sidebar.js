@@ -7,20 +7,20 @@ import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
 import igdbAPI from "../../../utils/igdbAPI";
 
-
 class Sidebar extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
-        movieResult: {},
-        bookResult: {},
-        gameResult: {},
-        musicResult: {}
-    };
+            movieResult: {},
+            bookResult: {},
+            gameResult: {},
+            musicResult: {},
+            page: "home",
+        };
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getMovie();
        this.getGame();
     }
@@ -41,7 +41,7 @@ class Sidebar extends Component {
         .catch(err => console.log(err));
     }
 
-    getGame(){
+    getGame() {
         //do some stuff then setState once we get a response we like
         igdbAPI.getGame()
             .then(res => {
@@ -70,37 +70,40 @@ class Sidebar extends Component {
       //  })
       //  .catch(err => console.log(err));
    // }
-
-    render(){
+    handlePageChange = (page) => {
+        console.log(page);
+        this.setState({ page: page })
+        console.log(this.state);
+    }
+    render() {
         return (
             <Jumbotron>
                 <Row>
-                    <div className="col-sm-2 shadow" id="sidebar">
-                     <p className="plug">Plug of the Day</p>
-                     <br></br>
-                        <Card
-                        title={this.state.movieResult.Title}
-                        imageSrc={this.state.movieResult.Poster}></Card>
-                        <br></br>
-                        <Card
-                        // title = {this.state.musicResult.Artists}
-                        // imageSrc = {this.state.musicResult.Cover}
-                        ></Card>
-                        <br></br>
-                     <Card 
-                    //  title = {this.state.gameResult.Title}
-                    //  imageSrc = {this.state.gameResult.Cover}
-                     ></Card>
-                     <br></br>
-                     <Card
-                    // title = {this.state.bookResult.Author}
-                    // imageSrc = {this.state.bookResult.Covers}
-                     ></Card>  
-                    </div>
-                    <Body></Body>
-                    
+                    {this.state.page === 'home' &&
+                        <>
+                            <div className="col-sm-2 shadow" id="sidebar">
+                                <p className="plug">Plug of the Day</p>
+                                <br></br>
+                                <Card></Card>
+                                <br></br>
+                                <Card></Card>
+                                <br></br>
+                                <Card></Card>
+                                <br></br>
+
+                                <Card
+                                    title={this.state.movieResult.Title}
+                                    imageSrc={this.state.movieResult.Poster}
+                                ></Card>
+                            </div>
+                            <Body
+                                handlePageChange={this.handlePageChange}
+                                page={this.state.page}></Body></> 
+                                || this.state.page === 'HappyResults' && <HappyResults />
+                                || this.state.page === 'HappyResults' && <HappyResults />
+               // || <404 />
+                 }
                 </Row>
-                
             </Jumbotron>
         );
     }
