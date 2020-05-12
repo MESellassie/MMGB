@@ -4,8 +4,11 @@ import Row from "./Row";
 import Card from "./Card";
 import Body from "./Body";
 import { render } from "react-dom";
-import OmdbAPI from "../../../utils/OmdbAPI";
-import igdbAPI from "../../../utils/igdbAPI";
+import API from "../../../utils/OmdbAPI";
+import HappyResults from "../Results/HappyResults";
+import GloomyResults from "../Results/GloomyResults";
+
+
 
 class Sidebar extends Component {
 
@@ -99,8 +102,10 @@ class Sidebar extends Component {
                             <Body
                                 handlePageChange={this.handlePageChange}
                                 page={this.state.page}></Body></> 
-                                || this.state.page === 'HappyResults' && <HappyResults />
-                                || this.state.page === 'HappyResults' && <HappyResults />
+                                // || this.state.page === 'HappyResults' && <HappyResults />
+                                // || this.state.page === 'GloomyResults' && <GloomyResults />
+                                // || this.state.page === 'HappyResults' && <HappyResults />
+                                // || this.state.page === 'HappyResults' && <HappyResults />
                // || <404 />
                  }
                 </Row>
