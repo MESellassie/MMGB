@@ -1,8 +1,8 @@
 import React from "react";
 
-function GloomySidebar(props) {
+function RelaxedSidebar(props) {
     return (
-        <div className="col-sm-2 shadow" id="gloomyMoodSidebar">
+        <div className="col-sm-2 shadow" id="relaxedMoodSidebar">
                     <div className="moodSidebarTitle">
                     <img src="" className="moodSidebarImage" alt="..."></img> 
                     </div>
@@ -11,4 +11,4 @@ function GloomySidebar(props) {
     )
 }
 
-export default GloomySidebar;
+export default RelaxedSidebar;

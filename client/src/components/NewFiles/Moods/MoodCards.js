@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../pages/Card";
+import { Link } from "react-router-dom";
+
 
 
 function MoodCards({mood}) {
@@ -39,20 +41,22 @@ function MoodCards({mood}) {
 
 
     return (
+        
         <div className="moodCardContainer container col-md-6 shadow">
             <div className="row row-cols-1 row-cols-md-2">
+                <Link to="/results">
                 <a href="#" className="moodCardLink">
                 <div className="col mb-4" id="card1">
                     <div className="card">
-                        <img src="" class="card-img-top" alt="..."></img>
+                        {/* //Link to="/detail" */}
+                        <Card imagSrc={movieState.imageUrl} title={movieState.title}/>
                         <div className="card-body">
                             <h5 className="card-title">MOVIE</h5>
-                            {/* //Link to="/detail" */}
-                            <Card imagSrc={movieState.imageUrl} title={movieState.title}/>
                         </div>
                     </div>
                 </div>
                 </a>
+                </Link>
 
                 <a href="#" className="moodCardLink">
                 <div className="col mb-4" id="card2">
