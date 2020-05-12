@@ -4,10 +4,10 @@ import Row from "./Row";
 import Card from "./Card";
 import Body from "./Body";
 import { render } from "react-dom";
-import API from "../../../utils/OmdbAPI";
+import OmdbAPI from "../../../utils/OmdbAPI";
+import igdbAPI from "../../../utils/igdbAPI";
 import HappyResults from "../Results/HappyResults";
 import GloomyResults from "../Results/GloomyResults";
-
 
 
 class Sidebar extends Component {
@@ -49,7 +49,7 @@ class Sidebar extends Component {
         igdbAPI.getGame()
             .then(res => {
                 console.log(res);
-                // this.getGame()
+                //this.getGame()
             })
             .catch(err => console.log(err));
     }
