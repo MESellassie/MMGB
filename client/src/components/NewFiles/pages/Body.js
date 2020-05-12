@@ -2,7 +2,7 @@ import React from "react";
 // import Jumbotron from "./Jumbotron";
 // import Row from "./Row";
 import Happy from "../Moods/Happy";
-import MoodRow from "./MoodRow";
+import MoodRow from "../Moods/MoodRow";
 import Gloomy from "../Moods/Gloomy";
 import Pumped from "../Moods/Pumped";
 import Relaxed from "../Moods/Relaxed";
@@ -11,14 +11,11 @@ import HappyResults from "../Results/HappyResults";
 class Body extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { page: "home" }
+        this.state={page:props.page};
     }
 
 
-    handlePageChange = (page) => {
-        console.log(page);
-        this.setState({ page: page })
-    }
+    
 
     render() {
         return (
@@ -33,14 +30,13 @@ class Body extends React.Component {
                         <br></br>
                         <MoodRow>
                             <Happy
-                                handlePageChange={this.handlePageChange}
+                                handlePageChange={this.props.handlePageChange}
                             ></Happy>
                             <Gloomy></Gloomy>
                             <Pumped></Pumped>
                             <Relaxed></Relaxed>
                         </MoodRow>
-                    </> || this.state.page === 'HappyResults' && <HappyResults />
-                    || this.state
+                    </> 
 
                 }
 
