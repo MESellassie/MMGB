@@ -8,7 +8,7 @@ export default {
   random: function() {
     let randomVowel = vowels[Math.floor(Math.random()*vowels.length) + 1];
     let randomConsonant = consonants[Math.floor(Math.random()*consonants.length) +1];
-    let randomYear = Math.floor(Math.random()*60 + 1960);
+    let randomYear = Math.floor(Math.random()*20 + 2000);
     //make the order of vowel and consonant random too:
     let firstLetter, secondLetter;
     if (Math.random() > .5 ) {
