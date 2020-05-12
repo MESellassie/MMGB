@@ -8,10 +8,6 @@ import API from "../../../utils/OmdbAPI";
 import HappyResults from "../Results/HappyResults";
 import GloomyResults from "../Results/GloomyResults";
 
-// state = {
-//     result: {}
-// };
-
 
 
 class Sidebar extends Component {
@@ -29,66 +25,63 @@ class Sidebar extends Component {
 
     componentDidMount() {
         this.getMovie();
+       this.getGame();
     }
 
     getMovie() {
-        API.random()
-            .then(res => {
-                console.log(res.data.Response);
-                console.log(res.data);
-                if (res.data.Response == "False" ||
-                    (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH")))
-                    this.getMovie();
-                else {
-                    this.setState({ movieResult: res.data });
-                }
-            })
-            .catch(err => console.log(err));
+        OmdbAPI.random()
+        .then(res => {
+            console.log(res.data.Response);
+            console.log(res.data);
+            if ( res.data.Response == "False" ||
+            (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH") ) ) { 
+            this.getMovie();
+            }
+            else {
+            this.setState({movieResult: res.data});
+            }
+        })
+        .catch(err => console.log(err));
     }
 
     getGame() {
         //do some stuff then setState once we get a response we like
-        API.random()
+        igdbAPI.getGame()
             .then(res => {
-                console.log(res.data);
-                this.getGame()
+                console.log(res);
+                // this.getGame()
             })
             .catch(err => console.log(err));
     }
 
-    getBook() {
+    //getBook() {
         //do some stuff then setState once we get a response we like
-        API.random()
-            .then(res => {
-                console.log(res.data);
+       // API.random()
+       // .then(res => {
+         //   console.log(res.data);
 
-            })
-            .catch(err => console.log(err));
-    }
+       // })
+       // .catch(err => console.log(err));
+    //}
 
-    getMusic() {
+  //  getMusic(){
         //do some stuff then setState once we get a response we like
-        API.random()
-            .then(res => {
-                console.log(res.data);
+       // API.random()
+      //  .then(res => {
+      //      console.log(res.data);
 
-            })
-            .catch(err => console.log(err));
-    }
-
+      //  })
+      //  .catch(err => console.log(err));
+   // }
     handlePageChange = (page) => {
         console.log(page);
         this.setState({ page: page })
         console.log(this.state);
     }
-
     render() {
         return (
             <Jumbotron>
-
                 <Row>
-
-
                     {this.state.page === 'home' &&
                         <>
                             <div className="col-sm-2 shadow" id="sidebar">
@@ -105,7 +98,6 @@ class Sidebar extends Component {
                                     title={this.state.movieResult.Title}
                                     imageSrc={this.state.movieResult.Poster}
                                 ></Card>
-
                             </div>
                             <Body
                                 handlePageChange={this.handlePageChange}
@@ -116,9 +108,7 @@ class Sidebar extends Component {
                                 // || this.state.page === 'HappyResults' && <HappyResults />
                // || <404 />
                  }
-
                 </Row>
-
             </Jumbotron>
         );
     }
