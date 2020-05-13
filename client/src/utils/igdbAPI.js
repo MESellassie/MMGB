@@ -14,7 +14,7 @@ export default {
     const consonants = "qzwrtpsdfghjklcvbnm";
     let randomVowel = vowels[Math.floor(Math.random()*vowels.length) + 1];
     let randomConsonant = consonants[Math.floor(Math.random()*consonants. length) +1];
-    let randomYear = Math.floor(Math.random()*10 + 2010);
+    //let randomYear = Math.floor(Math.random()*10 + 2010);
     //make the order of vowel and consonant random too:
     let firstLetter, secondLetter;
     if (Math.random() > .5 ) {
@@ -25,7 +25,7 @@ export default {
       secondLetter = randomVowel;
     }
     return axios({
-      url: `https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games?search=${firstLetter+secondLetter}&fields=id,name`,
+      url: `https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games?search=${firstLetter+secondLetter}genre.name&fields=name`,
       method: 'GET',
       headers: {
           "Access-Control-Allow-Origin": "*",
@@ -33,7 +33,8 @@ export default {
           // 'Accept': 'application/json',
           'user-key': APIKEY
       },
-      data: "fields alternative_name,character,collection,company,description,game,name,person,platform,popularity,published_at,test_dummy,theme;"
+
+      data: "game,name,platform;"
     })
       .then(response => {
           console.log(response);

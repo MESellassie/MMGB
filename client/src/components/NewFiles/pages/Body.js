@@ -32,7 +32,9 @@ class Body extends React.Component {
                             <Happy
                                 handlePageChange={this.props.handlePageChange}
                             ></Happy>
-                            <Gloomy></Gloomy>
+                            <Gloomy
+                                handlePageChange={this.props.handlePageChange}
+                            ></Gloomy>
                             <Pumped></Pumped>
                             <Relaxed></Relaxed>
                         </MoodRow>

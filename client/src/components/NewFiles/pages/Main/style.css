@@ -25,11 +25,6 @@
     padding-top: 100px;
 }
 
-#moodSidebar {
-    background-color: rgb(157, 216, 216);
-    padding-bottom: 10px;
-    padding-top: 100px;
-}
 
 #mainBody {
     position: relative;
@@ -97,15 +92,57 @@
     background: rgb(157, 216, 216); 
 }
 
-.moodBody {
+.happyMoodBody {
     background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(120, 121, 124), rgb(69, 153, 202));
 }
 
-.moodSidebarTitle {
-    font-size: 20px;
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg);
+#happyMoodSidebar {
+    background-color: rgb(226, 235, 65);
+    padding-bottom: 10px;
+    padding-top: 100px;
 }
+
+#gloomyMoodSidebar {
+    background-color: rgb(74, 75, 82);
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.gloomyMoodBody {
+    background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(120, 121, 124), rgb(120, 120, 177));
+}
+
+#pumpedMoodSidebar {
+    background-color: rgb(0, 0, 148);
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.pumpedMoodBody {
+    background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(85, 102, 138), rgb(164, 181, 255));
+}
+
+#relaxedMoodSidebar {
+    background-color: rgb(92, 236, 255);
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.relaxedMoodBody {
+    background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(85, 102, 138), rgb(164, 173, 255));
+}
+
+.moodSidebarImage {
+    height: 70%;
+    width: 70%;
+    margin-top: -50px;
+    padding-bottom: 20px;
+    /* font-size: 20px;
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg); */
+}
+
+
 
 #card1 {
     padding-top: 15px;
