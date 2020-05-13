@@ -132,6 +132,12 @@
     background-image: linear-gradient(to top,rgb(48, 47, 47), rgb(85, 102, 138), rgb(164, 173, 255));
 }
 
+#resultsSidebar {
+    background-color: rgb(92, 236, 255);
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
 .moodSidebarImage {
     height: 70%;
     width: 70%;

@@ -24,11 +24,16 @@ class Sidebar extends Component {
             gameResult: {},
             musicResult: {},
             page: "home",
+            
         };
     }
 
+
+
     componentDidMount() {
         this.getMovie();
+
+
     }
 
     getMovie() {
@@ -47,6 +52,8 @@ class Sidebar extends Component {
     }
 
     getGame() {
+
+
         //do some stuff then setState once we get a response we like
         API.random()
             .then(res => {
@@ -109,13 +116,9 @@ class Sidebar extends Component {
                             </div>
                             <Body
                                 handlePageChange={this.handlePageChange}
-                                page={this.state.page}></Body></> 
-                                // || this.state.page === 'HappyResults' && <HappyResults />
-                                // || this.state.page === 'GloomyResults' && <GloomyResults />
-                                // || this.state.page === 'HappyResults' && <HappyResults />
-                                // || this.state.page === 'HappyResults' && <HappyResults />
-               // || <404 />
-                 }
+                                page={this.state.page}></Body></>
+
+                    }
 
                 </Row>
 
