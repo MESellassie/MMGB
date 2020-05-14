@@ -1,9 +1,9 @@
 import React from "react";
-import MoodCards from "./MoodCards";
+import MoodCards from "../Moods/MoodCards";
 
 function MoodBody(props) {
     return (
-        <div className="moodBody col-sm-12
+        <div className="moodBody col-sm-10
         ">
             <MoodCards></MoodCards>
             
@@ -13,4 +13,4 @@ function MoodBody(props) {
     );
 }
 
-export default MoodBody
+export default MoodBody;

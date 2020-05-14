@@ -1,8 +1,7 @@
 import React from "react";
-import Row from "./Row";
-import Container from "./Container";
 
-function MoodCards() {
+
+function MoodCards(props) {
     return (
         // <div className="moodContainer">
 
@@ -185,4 +184,9 @@ function MoodCards() {
 
     )
 }
+<<<<<<< HEAD:client/src/components/NewFiles/pages/MoodCards.js
 export default MoodCards;
+=======
+
+export default MoodCards;
+>>>>>>> 9736eda7043080d831ea1f266d33128f217e60e6:client/src/components/NewFiles/Moods/MoodCards.js
