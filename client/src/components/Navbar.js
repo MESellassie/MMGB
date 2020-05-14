@@ -25,22 +25,24 @@ class Landing extends Component {
         )
 
         const userLink = (
+
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link to="/profile" className="nav-link">
+                    {/* <Link to="/profile" className="nav-link">
                         User
-          </Link>
+          </Link> */}
                 </li>
                 <li className="nav-item">
                     <a href="" onClick={this.logOut.bind(this)} className="nav-link">
                         Logout
-          </a>
+                    </a>
                 </li>
             </ul>
         )
 
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+            <nav className="navbar navbar-expand-lg" id="landingNav">
+                <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/MMGB.png?raw=true" width="110" height="30" className="d-inline-block align-top" alt=""></img>
                 <button
                     className="navbar-toggler"
                     type="button"

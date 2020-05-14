@@ -18,9 +18,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navbar />
+          {/* <Navbar /> */}
           <Route exact path="/" component={Landing} />
-          <div className="container">
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/mmgb" component={MMGB} />
@@ -29,7 +28,6 @@ class App extends Component {
             <Route exact path="/pumped" component={PumpedResults} />
             <Route exact path="/relaxed" component={RelaxedResults} />
             <Route exact path="/results" component={ResultsCard} />
-          </div>
         </div>
       </Router>
       
