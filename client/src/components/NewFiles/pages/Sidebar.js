@@ -6,8 +6,7 @@ import Body from "./Body";
 import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
 import igdbAPI from "../../../utils/igdbAPI";
-import HappyResults from "../Results/HappyResults";
-import GloomyResults from "../Results/GloomyResults";
+
 
 
 class Sidebar extends Component {
