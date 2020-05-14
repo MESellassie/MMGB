@@ -6,7 +6,6 @@ import MoodRow from "../Moods/MoodRow";
 import Gloomy from "../Moods/Gloomy";
 import Pumped from "../Moods/Pumped";
 import Relaxed from "../Moods/Relaxed";
-import HappyResults from "../Results/HappyResults";
 
 class Body extends React.Component {
     constructor(props) {
@@ -29,20 +28,14 @@ class Body extends React.Component {
                         <br></br>
                         <br></br>
                         <MoodRow>
-                            <Happy
-                                handlePageChange={this.props.handlePageChange}
-                            ></Happy>
-                            <Gloomy
-                                handlePageChange={this.props.handlePageChange}
-                            ></Gloomy>
+                            <Happy></Happy>
+                            <Gloomy ></Gloomy>
                             <Pumped></Pumped>
                             <Relaxed></Relaxed>
                         </MoodRow>
                     </> 
 
                 }
-
-
 
                 {this.props.children}
             </div>
