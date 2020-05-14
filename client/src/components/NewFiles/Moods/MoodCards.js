@@ -1,188 +1,134 @@
-import React from "react";
+import React, { Component, useEffect, useState } from "react";
+import Card from "../pages/Card";
+import { Link } from "react-router-dom";
+import happyMovieTitles from "../pages/happyTitles";
 
 
-function MoodCards(props) {
-    return (
-        // <div className="moodContainer">
 
-        //     <div className="movieCardWrapper">MOVIES
-        //         <div className="movieBox1">MOVIE 1</div>
-        //         <div className="movieBox2">MOVIE 2</div>
-        //         <div className="movieBox3">MOVIE 3</div>
-        //         <div className="movieBox4">MOVIE 4</div>
-        //     </div>
+class MoodCards extends Component {
 
-        //     <div className="musicCardWrapper">MUSIC
-        //         <div className="musicBox1">MUSIC 1</div>
-        //         <div className="musicBox2">MUSIC 2</div>
-        //         <div className="musicBox3">MUSIC 3</div>
-        //         <div className="musicBox4">MUSIC 4</div>
-        //     </div>
+    //movie state
+    constructor(props) {
+        super(props);
+        this.state = {
+            mood: "",
+        }
+    }
 
-        //     <div className="gamesCardWrapper">GAMES
-        //         <div className="gamesBox1">GAMES 1</div>
-        //         <div className="gamesBox2">GAMES 2</div>
-        //         <div className="gamesBox3">GAMES 3</div>
-        //         <div className="gamesBox4">GAMES 4</div>
-        //     </div>
+    componentDidMount() {
+        this.setState({ mood: this.props.mood }, () => {
 
-        //     <div className="booksCardWrapper">BOOKS
-        //         <div className="booksBox1">BOOKS 1</div>
-        //         <div className="booksBox2">BOOKS 2</div>
-        //         <div className="booksBox3">BOOKS 3</div>
-        //         <div className="booksBox4">BOOKS 4</div>
-        //         <div className="booksBox4">BOOKS 4</div>
+            if (this.state.mood === "happy") {
+                // happyMovieTitles.random()
+                console.log(happyMovieTitles.random())
+                
+    
+                console.log(this.props.mood);
+                ;
+        } 
+            
+            
+        })
+    }
 
-        //     </div>
-        // </div>
-        // ==================================================
-        // <div>
-        // <div className="movieContainer container col-sm-6">
-        //     <div className="row row-cols-1 row-cols-md-2">
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
 
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
+    //music state
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
+    //game state
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
+    //book state
+    // const [movieState, setMovieState] = useState({
+    //     responseData: {},
+    //     title: "",
+    //     imageUrl: ""
+    // })
 
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
+    // useEffect(() => {
+    //1. use our "mood" prop to determine what mood we should be passing to our api calls
 
-        //         <div className="col mb-4">
-        //             <div className="card">
-        //                 <img src="..." class="card-img-top" alt="..."></img>
-        //                 <div className="card-body">
-        //                     <h5 className="card-title">MOVIE</h5>
-        //                     <p className="card-text">MOVIE</p>
-        //                 </div>
-        //             </div>
-        //         </div>
+    //2. make our four different api calls
 
-        //     </div>
-        // </div>
 
-        //  <div className="musicContainer container col-sm-6">
-        //      <div className="row row-cols-1 row-cols-md-2">
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
+    //3. set each of our four states individually based on these API calls (set the appropriate state based on the .then() from any API Call we make)
+    // }, [])
 
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
+    render() {
 
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
 
-        //          <div className="col mb-4">
-        //              <div className="card">
-        //                  <img src="..." class="card-img-top" alt="..."></img>
-        //                  <div className="card-body">
-        //                      <h5 className="card-title">MUSIC</h5>
-        //                      <p className="card-text">MUSIC</p>
-        //                  </div>
-        //              </div>
-        //          </div>
+        return (
 
-        //      </div>
-        //  </div>
+            // Happy MoodCard
+            <div className="moodCardContainer container col-md-6 shadow">
+                <div className="row row-cols-1 row-cols-md-2">
+                    <Link to="/results">
+                        <a href="#" className="moodCardLink">
+                            <div className="col mb-4" id="card1">
+                                <div className="card">
+                                    {/* //Link to="/detail" */}
+                                    {/* <Card imagSrc={movieState.imageUrl} title={movieState.title}/> */}
+                                    <div className="card-body">
+                                        <h5 className="card-title">MOVIE</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
 
-        //  </div>
-        //  ================================================
-        <div className="moodCardContainer container col-md-6 shadow">
-            <div className="row row-cols-1 row-cols-md-2">
-                <a href="#" className="moodCardLink">
-                <div className="col mb-4" id="card1">
-                    <div className="card">
-                        <img src="" class="card-img-top" alt="..."></img>
-                        <div className="card-body">
-                            <h5 className="card-title">MOVIE</h5>
-                            <p className="card-text">info:</p>
+                    <a href="#" className="moodCardLink">
+                        <div className="col mb-4" id="card2">
+                            <div className="card">
+                                <img src="..." class="card-img-top" alt="..."></img>
+                                <div className="card-body">
+                                    <h5 className="card-title">MUSIC</h5>
+                                    <p className="card-text">info:</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                </a>
+                    </a>
 
-                <a href="#" className="moodCardLink">
-                <div className="col mb-4" id="card2">
-                    <div className="card">
-                        <img src="..." class="card-img-top" alt="..."></img>
-                        <div className="card-body">
-                            <h5 className="card-title">MUSIC</h5>
-                            <p className="card-text">info:</p>
+                    <a href="#" className="moodCardLink">
+                        <div className="col mb-4" id="card3">
+                            <div className="card">
+                                <img src="..." class="card-img-top" alt="..."></img>
+                                <div className="card-body">
+                                    <h5 className="card-title">GAMES</h5>
+                                    <p className="card-text">info:</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                </a>
+                    </a>
 
-                <a href="#" className="moodCardLink">
-                <div className="col mb-4" id="card3">
-                    <div className="card">
-                        <img src="..." class="card-img-top" alt="..."></img>
-                        <div className="card-body">
-                            <h5 className="card-title">GAMES</h5>
-                            <p className="card-text">info:</p>
+                    <a href="#" className="moodCardLink">
+                        <div className="col mb-4" id="card4">
+                            <div className="card">
+                                <img src="..." class="card-img-top" alt="..."></img>
+                                <div className="card-body">
+                                    <h5 className="card-title">BOOKS</h5>
+                                    <p className="card-text">info:</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                </a>
+                    </a>
 
-                <a href="#" className="moodCardLink">
-                <div className="col mb-4" id="card4">
-                    <div className="card">
-                        <img src="..." class="card-img-top" alt="..."></img>
-                        <div className="card-body">
-                            <h5 className="card-title">BOOKS</h5>
-                            <p className="card-text">info:</p>
-                        </div>
-                    </div>
                 </div>
-                </a>
-
             </div>
-        </div>
 
-    )
+        );
+    }
+
 }
 <<<<<<< HEAD:client/src/components/NewFiles/pages/MoodCards.js
 export default MoodCards;
