@@ -6,6 +6,7 @@ import Body from "./Body";
 import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
 import igdbAPI from "../../../utils/igdbAPI";
+import rawgAPI from "../../../utils/rawgAPI";
 
 
 
@@ -19,69 +20,71 @@ class Sidebar extends Component {
             gameResult: {},
             musicResult: {},
             page: "home",
-            
+
         };
     }
 
-
-
     componentDidMount() {
         this.getMovie();
-       this.getGame();
+        this.getGame();
     }
 
     getMovie() {
         OmdbAPI.random()
-        .then(res => {
-            console.log(res.data.Response);
-            console.log(res.data);
-            if ( res.data.Response == "False" ||
-            (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH") ) ) { 
-            this.getMovie();
-            }
-            else {
-            this.setState({movieResult: res.data});
-            }
-        })
-        .catch(err => console.log(err));
-    }
-
-    getGame() {
-
-
-        //do some stuff then setState once we get a response we like
-        igdbAPI.getGame()
             .then(res => {
-                console.log(res);
-                //this.getGame()
+                console.log(res.data.Response);
+                console.log(res.data);
+                if (res.data.Response == "False" ||
+                    (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH"))) {
+                    this.getMovie();
+                }
+                else {
+                    this.setState({ movieResult: res.data });
+                }
             })
             .catch(err => console.log(err));
     }
 
-    //getBook() {
-        //do some stuff then setState once we get a response we like
-       // API.random()
-       // .then(res => {
-         //   console.log(res.data);
+    getGame() {
+        rawgAPI()
 
-       // })
-       // .catch(err => console.log(err));
+    }
+
+    // getGame() {
+
+
+    //     //do some stuff then setState once we get a response we like
+    //     igdbAPI.getGame()
+    //         .then(res => {
+    //             console.log(res);
+    //             //this.getGame()
+    //         })
+    //         .catch(err => console.log(err));
+    // }
+
+    //getBook() {
+    //do some stuff then setState once we get a response we like
+    // API.random()
+    // .then(res => {
+    //   console.log(res.data);
+
+    // })
+    // .catch(err => console.log(err));
     //}
 
-  //  getMusic(){
-        //do some stuff then setState once we get a response we like
-       // API.random()
-      //  .then(res => {
-      //      console.log(res.data);
+    //  getMusic(){
+    //do some stuff then setState once we get a response we like
+    // API.random()
+    //  .then(res => {
+    //      console.log(res.data);
 
-      //  })
-      //  .catch(err => console.log(err));
-   // }
-    handlePageChange = (page) => {
-        console.log(page);
-        this.setState({ page: page })
-        console.log(this.state);
-    }
+    //  })
+    //  .catch(err => console.log(err));
+    // }
+    // handlePageChange = (page) => {
+    //     this.setState({ page: page })
+    // }
+
     render() {
         return (
             <Jumbotron>
@@ -105,10 +108,9 @@ class Sidebar extends Component {
                             </div>
                             <Body
                                 handlePageChange={this.handlePageChange}
-                                page={this.state.page}></Body></> 
+                                page={this.state.page}></Body></>
 
-               // || <404 />
-                 }
+                    }
                 </Row>
             </Jumbotron>
         );

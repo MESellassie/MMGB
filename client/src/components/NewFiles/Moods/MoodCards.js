@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import Card from "../pages/Card";
 import { Link } from "react-router-dom";
-import happyMovieTitles from "../pages/happyTitles";
+import happyMovieTitles from "../pages/happyMovieTitles";
 
 
 
@@ -78,7 +78,7 @@ class MoodCards extends Component {
                     <Link to="/results">
                         <div className="col mb-4" id="card1">
                             <div className="card">
-                            <img src="..." class="card-img-top" alt="..."></img>
+                            <img src="#" className="card-img-top" alt="..."></img>
                                 {/* //Link to="/detail" */}
                                 {/* <Card imagSrc={movieState.imageUrl} title={movieState.title}/> */}
                                 <div className="card-body">
@@ -92,7 +92,7 @@ class MoodCards extends Component {
                     <Link to="/results">
                         <div className="col mb-4" id="card2">
                             <div className="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
+                                <img src="#" className="card-img-top" alt="..."></img>
                                 <div className="card-body">
                                     <h5 className="card-title">MUSIC</h5>
                                     <p className="card-text">info:</p>
@@ -104,7 +104,7 @@ class MoodCards extends Component {
                     <Link to="/results">
                         <div className="col mb-4" id="card3">
                             <div className="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
+                                <img src="#" className="card-img-top" alt="..."></img>
                                 <div className="card-body">
                                     <h5 className="card-title">GAMES</h5>
                                     <p className="card-text">info:</p>
@@ -116,7 +116,7 @@ class MoodCards extends Component {
                     <Link to="/results">
                         <div className="col mb-4" id="card4">
                             <div className="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
+                                <img src="#" className="card-img-top" alt="..."></img>
                                 <div className="card-body">
                                     <h5 className="card-title">BOOKS</h5>
                                     <p className="card-text">info:</p>
