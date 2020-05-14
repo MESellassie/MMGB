@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import Card from "../pages/Card";
 import { Link } from "react-router-dom";
-import happyMovieTitles from "../pages/happyMovieTitles";
+import happyMovieTitles from "../pages/happyTitles";
 
 
 
