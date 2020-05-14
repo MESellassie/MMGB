@@ -18,8 +18,10 @@ function PumpedResults(){
         <Container>
         <Jumbotron>
             <Row>
-                <PumpedSidebar></PumpedSidebar>
-                <PumpedMoodBody></PumpedMoodBody>
+                <PumpedSidebar>
+                </PumpedSidebar>
+                <PumpedMoodBody>
+                </PumpedMoodBody>
             </Row>
         </Jumbotron>
         </Container>
