@@ -89,11 +89,10 @@
     height: auto;
 } */
 .cardResults {
-    background: darkgray;
-    width: 100px;
-    height: 75px;
-    margin: 5px;
-   
+    background: lightgray;
+    width: 75%;
+    height: auto;
+    margin: 30px;
 }
 .movieCardWrapper {
     background: white;
