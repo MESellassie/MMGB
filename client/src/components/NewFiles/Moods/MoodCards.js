@@ -177,5 +177,4 @@ class MoodCards extends Component {
     }
 
 }
-
 export default MoodCards;

@@ -14,7 +14,7 @@ function ResultsCard(props) {
                 <Jumbotron>
                     <Row>
                         <ResultsSidebar></ResultsSidebar>
-                        <div className="resultContainer col-sm-10">
+                        <div className=" resultContainer col-sm-10">
                             <div className="col-sm-4">
                                 <img src="" className="resultCardImage" alt="..."></img>
                             </div>
