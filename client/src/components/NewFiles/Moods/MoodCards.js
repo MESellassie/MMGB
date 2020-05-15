@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import Card from "../pages/Card";
 import { Link } from "react-router-dom";
-import happyMovieTitles from "../pages/happyTitles";
+import happyMovieTitles from "../pages/happyMovieTitles";
 
 
 
@@ -12,6 +12,7 @@ class MoodCards extends Component {
         super(props);
         this.state = {
             mood: "",
+            movieResult: {},
         }
     }
 
@@ -19,15 +20,16 @@ class MoodCards extends Component {
         this.setState({ mood: this.props.mood }, () => {
 
             if (this.state.mood === "happy") {
+
+
+
                 // happyMovieTitles.random()
                 console.log(happyMovieTitles.random())
-                
-    
                 console.log(this.props.mood);
                 ;
-        } 
-            
-            
+            }
+
+
         })
     }
 
@@ -74,54 +76,54 @@ class MoodCards extends Component {
             <div className="moodCardContainer container col-md-6 shadow">
                 <div className="row row-cols-1 row-cols-md-2">
                     <Link to="/results">
-                        <a href="#" className="moodCardLink">
-                            <div className="col mb-4" id="card1">
-                                <div className="card">
-                                    {/* //Link to="/detail" */}
-                                    {/* <Card imagSrc={movieState.imageUrl} title={movieState.title}/> */}
-                                    <div className="card-body">
-                                        <h5 className="card-title">MOVIE</h5>
-                                    </div>
+                        <div className="col mb-4" id="card1">
+                            <div className="card">
+                            <img src="#" className="card-img-top" alt="..."></img>
+                                {/* //Link to="/detail" */}
+                                {/* <Card imagSrc={movieState.imageUrl} title={movieState.title}/> */}
+                                <div className="card-body">
+                                    <h5 className="card-title">MOVIE</h5>
+                                    <p className="card-text">info:</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </Link>
 
-                    <a href="#" className="moodCardLink">
+                    <Link to="/results">
                         <div className="col mb-4" id="card2">
                             <div className="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
+                                <img src="#" className="card-img-top" alt="..."></img>
                                 <div className="card-body">
                                     <h5 className="card-title">MUSIC</h5>
                                     <p className="card-text">info:</p>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
-                    <a href="#" className="moodCardLink">
+                    <Link to="/results">
                         <div className="col mb-4" id="card3">
                             <div className="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
+                                <img src="#" className="card-img-top" alt="..."></img>
                                 <div className="card-body">
                                     <h5 className="card-title">GAMES</h5>
                                     <p className="card-text">info:</p>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
-                    <a href="#" className="moodCardLink">
+                    <Link to="/results">
                         <div className="col mb-4" id="card4">
                             <div className="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
+                                <img src="#" className="card-img-top" alt="..."></img>
                                 <div className="card-body">
                                     <h5 className="card-title">BOOKS</h5>
                                     <p className="card-text">info:</p>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </Link>
 
                 </div>
             </div>
