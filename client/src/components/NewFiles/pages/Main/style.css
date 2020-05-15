@@ -38,7 +38,7 @@
 }
 
 #logo {
-    /* box-shadow: 2px 2px 4px #000000; */
+    box-shadow: 2px 2px 4px #000000;
 }
 .plug {
     color: white;
@@ -93,6 +93,11 @@
     width: 75%;
     height: auto;
     margin: 30px;
+}
+
+.resultCardImage {
+    width: auto;
+    margin: 10px;
 }
 .movieCardWrapper {
     background: white;
