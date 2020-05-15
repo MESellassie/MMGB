@@ -21,7 +21,13 @@ export default {
     
     let randomParams = `&t=${firstLetter+secondLetter}&y=${randomYear}`;
     return axios.get(BASEURL + randomParams + APIKEY);
+  },
+
+  getMovieData: function(title) {
+    return axios.get(BASEURL + title + APIKEY);
   }
+
+
 };
 
 
