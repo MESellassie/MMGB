@@ -5,7 +5,6 @@ import Card from "./Card";
 import Body from "./Body";
 import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
-import igdbAPI from "../../../utils/igdbAPI";
 import HappyResults from "../Results/HappyResults";
 import rawgAPI from "../../../utils/rawgAPI";
 
@@ -33,7 +32,7 @@ class Sidebar extends Component {
             .then(res => {
 
                 console.log(res.cover);
-              console.log(res.data.Response);
+                console.log(res.data.Response);
                 console.log(res.data);
                 if (res.data.Response == "False" ||
                     (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH"))) {
@@ -90,7 +89,7 @@ class Sidebar extends Component {
         return (
             <Jumbotron>
                 <Row>
-                    {this.state.page === 'home' &&
+                    {/* {this.state.page === 'home' && */}
                         <>
                             <div className="col-sm-2 shadow" id="sidebar">
                                 <p className="plug">Plug of the Day</p>
@@ -109,14 +108,9 @@ class Sidebar extends Component {
                             </div>
                             <Body
                                 handlePageChange={this.handlePageChange}
-                                page={this.state.page}></Body></> 
-                                || this.state.page === 'HappyResults' && <HappyResults />
-                                || this.state.page === 'HappyResults' && <HappyResults />
-               // || <404 />
-                 }
                                 page={this.state.page}></Body></>
 
-                    }
+                    {/* } */}
                 </Row>
             </Jumbotron>
         );

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import happyTitles from "../pages/happyTitles";
 import OMDBAPI from "../../../utils/OmdbAPI";
 import BOOKSAPI from "../../../utils/googleAPI";
-import IGDAPI from "../../../utils/igdbAPI";
-import MUSICAPI from "../../../utils/spodifyAPI";
+// import IGDAPI from "../../../utils/igdbAPI";
+// import MUSICAPI from "../../../utils/spodifyAPI";
 // import axios from "axios";
 
 
@@ -43,11 +43,11 @@ class MoodCards extends Component {
         console.log("getRandomValuess:moodObject", moodObject)
         //TEST: DELETE ME WHEN ALL FUNCTIONS ARE DEFINED
         if (moodObject) {
-            const randomMovie = moodObject.getRandomMovie();
-            console.log("getRandomValues:randomMovie", randomMovie);
+           
             OMDBAPI.getMovieData(moodObject.getRandomMovie())
                .then(res => {
                    this.setState({movie: res.data})
+                   console.log({movie: res.data})
                })
         }
         //END TEST
