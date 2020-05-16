@@ -22,7 +22,7 @@ class Body extends React.Component {
                 <br></br>
                 {
                     this.state.page === 'home' && <>
-                        <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/Untitled.png?raw=true" className="card-img" alt="..." id="MMGBlogo"></img>
+                        <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/Untitled.png?raw=true" className="companyLogo" alt="..." id="MMGBlogo"></img>
                         <br></br>
                         <br></br>
                         <br></br>
