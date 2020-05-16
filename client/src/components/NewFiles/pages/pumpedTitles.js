@@ -1,6 +1,6 @@
 const pumpedTitles = {
     gameTitles: [
-        "3498", "22511", "28", "58175", "3990", "58829", "58134", "282825", "259801", "3287"
+        "3498", "22511", "28", "58175", "3990", "58829", "58134", "282825", "259801", "3287", "3498", "5540", "28131", "4729", "4101", "3990", "13537", "58617",
     ],
     movieTitles: [
         "Con+Air", "Avengers+Infinity+War", "The+Matrix", "Back+To+The+Future", "Star+Wars+The+Force+Awakens", "Bad+Boys+For+Life", "The+Dark+Knight", "6+Underground", "National+Treasure", "John+Wick", "Gone+In+60+Seconds"
