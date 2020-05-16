@@ -37,6 +37,9 @@
     padding-top: 6px;
 }
 
+#logo {
+    box-shadow: 2px 2px 4px #000000;
+}
 .plug {
     color: white;
     font-size: 25px;
@@ -75,6 +78,137 @@
     background-image: linear-gradient(to top right,rgb(48, 47, 47), rgb(87, 87, 87), rgb(136, 167, 168));
 }
 
+.moodContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .cardTitles {
+    background: white;
+    width: 40%;
+    height: auto;
+} */
+
+
+/* RESULTS PAGE  */
+.cardResults {
+    background: lightgray;
+    width: 75%;
+    height: auto;
+    margin: 30px;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.187);
+}
+
+.resultsCardTitle {
+    padding: 0px;
+    margin: 0px;
+    text-shadow: 2px 2px rgba(128, 128, 128, 0.468);
+}
+
+.resultsBasicInfo {
+    color: gray;
+
+}
+
+.rating {
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    background-color: rgb(75, 56, 143);
+    margin-left: 30%;
+    margin-right: 65%;  
+    margin-bottom: 0%;  
+    padding: 0px;
+    
+}
+
+.resultCardImage {
+    width: 275px;
+    margin: 10px;
+    margin-top: 1%;
+    margin-right: 25px;
+    float: left;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.468);
+
+}
+
+.youTubePlayer {
+    height: auto;
+    width: auto;
+   
+}
+
+.movieCardWrapper {
+    background: white;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+
+}
+.movieCardWrapper2 {
+    background: white;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.musicCardWrapper {
+    background: blue;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+.musicCardWrapper2 {
+    background: blue;
+    width: 47%;
+    height: auto;
+    /* margin: 5px; */
+    text-align: center;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+.gamesCardWrapper {
+    background: cyan;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+.gamesCardWrapper2 {
+    background: cyan;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.booksCardWrapper {
+    background: yellow;
+    width: 47%;
+    height: auto;
+    margin: 10px;   
+    text-align: center;
+}
+.booksCardWrapper2 {
+    background: yellow;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 #MMGBlogo {
     padding: 20px;
 }
@@ -186,6 +320,15 @@
     transform: rotate(270deg); */
 }
 
+.resultsSidebarImage {
+    height: 50%;
+    width: 50%;
+    margin-top: -50px;
+    padding-bottom: 20px;
+    /* font-size: 20px;
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg); */
+}
 .navbarLogo:hover {
     transform: scale(1.1);
     transition: all ease 900ms;
