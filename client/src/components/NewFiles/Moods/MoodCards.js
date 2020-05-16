@@ -7,6 +7,7 @@ import BOOKSAPI from "../../../utils/BooksAPI";
 import rawgAPI from "../../../utils/rawgAPI";
 import deezerAPI from "../../../utils/deezerAPI";
 // import IGDAPI from "../../../utils/igdbAPI";
+
 // import MUSICAPI from "../../../utils/spodifyAPI";
 // import axios from "axios";
 
@@ -45,7 +46,6 @@ class MoodCards extends Component {
         console.log("getRandomValuess:moodObject", moodObject)
         // //TEST: DELETE ME WHEN ALL FUNCTIONS ARE DEFINED
         // if (moodObject) {
-
         //     OMDBAPI.getMovieData(moodObject.getRandomMovie())
         //        .then(res => {
         //            this.setState({movie: res.data})
@@ -94,6 +94,7 @@ class MoodCards extends Component {
                 .catch(err => console.log(err));
 
         }
+
 
     }
 
