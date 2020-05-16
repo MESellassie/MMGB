@@ -37,7 +37,6 @@ class Sidebar extends Component {
     getMovie() {
         OmdbAPI.random()
             .then(res => {
-
                 if (res.data.Response == "False" ||
                     (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH"))) {
                     this.getMovie();
@@ -92,12 +91,12 @@ class Sidebar extends Component {
             )
     }
 
-
     render() {
         return (
             <Jumbotron>
                 <Row>
                     {/* {this.state.page === 'home' && */}
+
                     <>
                         <div className="col-sm-2 shadow" id="sidebar">
                             <p className="plug">Plug of the Day</p>

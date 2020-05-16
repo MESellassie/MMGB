@@ -359,6 +359,10 @@
 
 .card-img {
     border-radius: 35px;
+    width: 95%;
+    height: auto;
+    margin-left: 1PX;
+
 }
 
 .page-footer{

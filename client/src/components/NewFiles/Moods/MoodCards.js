@@ -93,7 +93,6 @@ class MoodCards extends Component {
                 .catch(err => console.log(err));
 
         }
-
     }
 
     // const [movieState, setMovieState] = useState({
