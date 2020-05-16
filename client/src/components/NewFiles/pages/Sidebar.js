@@ -12,7 +12,6 @@ import BooksAPI from "../../../utils/BooksAPI";
 import happyTitles from "../pages/happyTitles";
 import { Link } from "react-router-dom";
 
-
 class Sidebar extends Component {
 
     constructor(props) {

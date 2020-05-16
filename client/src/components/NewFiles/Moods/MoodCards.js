@@ -7,7 +7,6 @@ import BOOKSAPI from "../../../utils/BooksAPI";
 import rawgAPI from "../../../utils/rawgAPI";
 import deezerAPI from "../../../utils/deezerAPI";
 // import IGDAPI from "../../../utils/igdbAPI";
-
 // import MUSICAPI from "../../../utils/spodifyAPI";
 // import axios from "axios";
 
@@ -94,7 +93,6 @@ class MoodCards extends Component {
                 .catch(err => console.log(err));
 
         }
-
 
     }
 
