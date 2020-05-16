@@ -6,7 +6,6 @@ import Row from "../pages/Row";
 import Footer from "../pages/Footer";
 import ResultsSidebar from "../Results/ResultsSidebar";
 
-
 function ResultsCard(props) {
 
 
@@ -23,14 +22,9 @@ function ResultsCard(props) {
     const bookResultImage = props.location.state.bookImage;
 
 
-    return (
 
-        <div>
-            <Navbar></Navbar>
-            <Container>
-                <Jumbotron>
-                    <Row>
-                        <ResultsSidebar></ResultsSidebar>
+function ResultsCard(props) {
+
 
                         <div className="card cardResults">
                             <div className="card-body">
@@ -58,6 +52,7 @@ function ResultsCard(props) {
                             </div>
 
                         </div>
+
                     </Row>
                 </Jumbotron>
             </Container>
@@ -65,5 +60,4 @@ function ResultsCard(props) {
         </div>
     );
 }
-
 export default ResultsCard;

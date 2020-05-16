@@ -1,6 +1,5 @@
 import axios from "axios";
 const BASEURL = "https://api.rawg.io/api/games/";
-
 const gameTitles = [
   "halo-combat-evolved", "Zelda", "Metroid", "Mario",
 ]

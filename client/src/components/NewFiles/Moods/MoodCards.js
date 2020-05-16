@@ -94,7 +94,7 @@ class MoodCards extends Component {
                 .catch(err => console.log("WE HAVE FAILED YOU!"));
                 
         }
-        
+
     }
 
 
