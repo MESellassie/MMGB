@@ -5,6 +5,7 @@ import happyTitles from "../pages/happyTitles";
 import OMDBAPI from "../../../utils/OmdbAPI";
 import BOOKSAPI from "../../../utils/BooksAPI";
 import rawgAPI from "../../../utils/rawgAPI";
+import deezerAPI from "../../../utils/deezerAPI";
 // import IGDAPI from "../../../utils/igdbAPI";
 // import MUSICAPI from "../../../utils/spodifyAPI";
 // import axios from "axios";
@@ -44,7 +45,6 @@ class MoodCards extends Component {
         console.log("getRandomValuess:moodObject", moodObject)
         // //TEST: DELETE ME WHEN ALL FUNCTIONS ARE DEFINED
         // if (moodObject) {
-
         //     OMDBAPI.getMovieData(moodObject.getRandomMovie())
         //        .then(res => {
         //            this.setState({movie: res.data})
@@ -59,41 +59,32 @@ class MoodCards extends Component {
             OMDBAPI.getMovieData(moodObject.getRandomMovie())
                 .then(res => {
                     movie = res.data;
-                    console.log(movie);
 
                     return BOOKSAPI.getBookData(moodObject.getRandomBook())
                         .then(res => {
                             book = res.data;
-                            console.log(book);
-                            // Title
-                            console.log(book.items[0].volumeInfo.title);
-                            // I know this is giving me the thumbnail
-                            console.log(book.items[0].volumeInfo.imageLinks.smallThumbnail)
+
 
                             return rawgAPI.getGameData(moodObject.getRandomGame())
                                 .then(res => {
                                     game = res.data;
-                                    console.log("HERE!!!!!!!!!")
-                                    console.log(game)
-                                    console.log(game.background_image)
-                                    //     return MUSICAPI.getMusicData(moodObject.getRandomSong())
-                                    //     .then(res => {
-                                    //         song = res.data;
-                                    //         // this.setState({
-                                    //         //     movie, 
-                                    //         //     book,
-                                    //         //     game,
-                                    //         //     song
-                                    //         // })
-                                    //     })
-                                    // })
 
-                                    this.setState({
-                                        movie,
-                                        book: book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
-                                        game: game.background_image,
-                                        song
-                                    })
+                                        return deezerAPI.getSongData(moodObject.getRandomSong())
+                                        .then(res => {
+                                            song = res.data;
+                                            console.log("SONG HERE!!!")
+                                            console.log(song)
+                                            console.log(song.album.cover_medium)
+                                            this.setState({
+                                                movie, 
+                                                book : book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
+                                                game : game.background_image,
+                                                song : song.album.cover_medium,
+                                            })
+                                        })
+
+                                        // comment this out and in to make this work
+                                    // })
 
                                 })
 
@@ -167,7 +158,9 @@ class MoodCards extends Component {
                     <Link to="/results">
                         <div className="col mb-4" id="card2">
                             <h5 className="card-title">MUSIC</h5>
-
+                            <Card
+                                imageSrc={this.state.song}
+                                />
                         </div>
                     </Link>
 
