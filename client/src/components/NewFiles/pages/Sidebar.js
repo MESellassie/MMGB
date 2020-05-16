@@ -5,10 +5,11 @@ import Card from "./Card";
 import Body from "./Body";
 import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
+import deezerAPI from "../../../utils/deezerAPI";
 import HappyResults from "../Results/HappyResults";
 import rawgAPI from "../../../utils/rawgAPI";
 import BooksAPI from "../../../utils/BooksAPI";
-import happySeeds from "../pages/happyTitles";
+import happyTitles from "../pages/happyTitles";
 import { Link } from "react-router-dom";
 
 class Sidebar extends Component {
@@ -28,16 +29,14 @@ class Sidebar extends Component {
 
     componentDidMount() {
         this.getMovie();
-        // this.getGame();
+        this.getGame();
         this.getBook();
+        this.getMusic();
     }
 
     getMovie() {
         OmdbAPI.random()
             .then(res => {
-                console.log(res.cover);
-                console.log(res.data.Response);
-                console.log(res.data);
                 if (res.data.Response == "False" ||
                     (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH"))) {
                     this.getMovie();
@@ -48,98 +47,99 @@ class Sidebar extends Component {
             })
             .catch(err => console.log(err));
     }
+    getGame() {
+        rawgAPI.getGameData(happyTitles.getRandomGame())
+        // rawgAPI.random()
+            .then(res => {
+                let game = res.data;
 
-    // getGame() {
-    //     rawgAPI()
+                this.setState({game: game.background_image})
 
-    // }
+                // if (res.data.Response == "False") {
+                //     this.getGame();
+                // }
+                // else {
+                //     console.log(game.background_image)
+                //     this.setState({ game:game.background_image })
+                // }
+            }
 
-    // getGame() {
+            )
+    }
+
+    getMusic() {
+        deezerAPI.getSongData(happyTitles.getRandomSong())
+            .then(res => {
+                let song = res.data;
+                console.log("HERE IS THE SONG INFO!!!!")
+                console.log(song)
+ 
+                this.setState({ song: song.album.cover_medium})
+            })
+            .catch(err => console.log(err));
+    }
 
 
-    //     //do some stuff then setState once we get a response we like
-    //     igdbAPI.getGame()
-    //         .then(res => {
-    //             console.log(res);
-    //             //this.getGame()
-    //         })
-    //         .catch(err => console.log(err));
-    // }
-
-    
     getBook() {
-        BooksAPI.random()
-                .then(res => {
-                    let book = res.data;
-                    console.log(book);
-                    if (res.data.Response == "False") {
-                        this.getBook();
-                    }
-                    else {
-                        this.setState({ book: book.items[0].volumeInfo.imageLinks.smallThumbnail})
-                    } 
-
-                    // this.setState({
-                    //     book: book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
-                    // })
-                    console.log(book.items[0].volumeInfo.title);
-                    // I know this is giving me the thumbnail
-                    console.log(book.items[0].volumeInfo.imageLinks.smallThumbnail)}
-                    ) 
+        BooksAPI.getBookData(happyTitles.getRandomBook())
+            .then(res => {
+                let book = res.data;
+                console.log(book);
+                
+                    this.setState({ book: book.items[0].volumeInfo.imageLinks.smallThumbnail })
                 }
-
-    // })
-    // .catch(err => console.log(err));
-    //}
-
-    //  getMusic(){
-    //do some stuff then setState once we get a response we like
-    // API.random()
-    //  .then(res => {
-    //      console.log(res.data);
-
-    //  })
-    //  .catch(err => console.log(err));
-    // }
-    // handlePageChange = (page) => {
-    //     this.setState({ page: page })
-    // }
+            )
+    }
 
     render() {
         return (
             <Jumbotron>
                 <Row>
                     {/* {this.state.page === 'home' && */}
-                        <>
-                            <div className="col-sm-2 shadow" id="sidebar">
-                                <p className="plug">Plug of the Day</p>
-                                <br></br>
-                                <Card></Card>
-                                <br></br>
-                                <Card></Card>
-                                <br></br>
-                                <Card
-                                    imageSrc={this.state.book}
-                                ></Card>
-                                <br></br>
 
-                                <Link to={{
-                                    pathname: `/results`,
-                                    state: {
-                                        movieTitle: this.state.movieResult.Title,
-                                        movieImage: this.state.movieResult.Poster,
-                                    }
-                                    }}
-                                    >
+                    <>
+                        <div className="col-sm-2 shadow" id="sidebar">
+                            <p className="plug">Plug of the Day</p>
+                            <br></br>
+                            <Link to={{
+                                pathname: `/results`,
+                                state: {
+                                    songTitle: this.state.movieResult.Title,
+                                    songImage: this.state.movieResult.Poster,
+                                }
+                            }}
+                            >
+                            <Card
+                                imageSrc={this.state.song}
+                            ></Card>
+                            </Link>
+                            <br></br>
+                            <Card
+                                imageSrc={this.state.game}
+                            ></Card>
+                            <br></br>
+                            <Card
+                                imageSrc={this.state.book}
+                            ></Card>
+                            <br></br>
+
+                            <Link to={{
+                                pathname: `/results`,
+                                state: {
+                                    movieTitle: this.state.movieResult.Title,
+                                    movieImage: this.state.movieResult.Poster,
+                                }
+                            }}
+                            >
                                 <Card
                                     title={this.state.movieResult.Title}
                                     imageSrc={this.state.movieResult.Poster}
                                 ></Card>
-                                </Link>
-                            </div>
-                            <Body
-                                handlePageChange={this.handlePageChange}
-                                page={this.state.page}></Body></>
+                            </Link>
+                        </div>
+                        <Body
+                            handlePageChange={this.handlePageChange}
+                            page={this.state.page}></Body></>
 
                     {/* } */}
                 </Row>
