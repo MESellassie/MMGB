@@ -37,6 +37,9 @@
     padding-top: 6px;
 }
 
+#logo {
+    box-shadow: 2px 2px 4px #000000;
+}
 .plug {
     color: white;
     font-size: 25px;
@@ -75,6 +78,96 @@
     background-image: linear-gradient(to top right,rgb(48, 47, 47), rgb(87, 87, 87), rgb(136, 167, 168));
 }
 
+.moodContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .cardTitles {
+    background: white;
+    width: 40%;
+    height: auto;
+} */
+.cardResults {
+    background: lightgray;
+    width: 75%;
+    height: auto;
+    margin: 30px;
+}
+
+.resultCardImage {
+    width: auto;
+    margin: 10px;
+}
+.movieCardWrapper {
+    background: white;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+
+}
+.movieCardWrapper2 {
+    background: white;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.musicCardWrapper {
+    background: blue;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+.musicCardWrapper2 {
+    background: blue;
+    width: 47%;
+    height: auto;
+    /* margin: 5px; */
+    text-align: center;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+.gamesCardWrapper {
+    background: cyan;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+.gamesCardWrapper2 {
+    background: cyan;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.booksCardWrapper {
+    background: yellow;
+    width: 47%;
+    height: auto;
+    margin: 10px;   
+    text-align: center;
+}
+.booksCardWrapper2 {
+    background: yellow;
+    width: 47%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 #MMGBlogo {
     padding: 20px;
 }

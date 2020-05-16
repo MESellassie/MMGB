@@ -5,7 +5,6 @@ import Card from "./Card";
 import Body from "./Body";
 import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
-import igdbAPI from "../../../utils/igdbAPI";
 import HappyResults from "../Results/HappyResults";
 import rawgAPI from "../../../utils/rawgAPI";
 import BooksAPI from "../../../utils/BooksAPI";
