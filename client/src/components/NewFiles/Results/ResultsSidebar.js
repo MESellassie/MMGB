@@ -4,8 +4,7 @@ function ResultsSidebar(props) {
     return (
         <div className="col-sm-2 shadow" id="resultsSidebar">
                     <div className="moodSidebarTitle">
-                    <img width="200" height="auto" src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/PUMPED.png?raw=true" className="resultsSidebarImage" alt="PUMPED"></img> 
-                    {/* <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/blackPanther.png?raw=true" className="resultCardImage" alt="POSTER"></img> */}
+                    <img width="200" height="auto" src="" className="resultsSidebarImage" alt=""></img> 
                     </div>
                     {props.children}
                 </div>
