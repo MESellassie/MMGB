@@ -7,6 +7,9 @@ import Footer from "../pages/Footer";
 import ResultsSidebar from "../Results/ResultsSidebar";
 
 function ResultsCard(props) {
+    const movieResultTitle= props.location.state.movieTitle;
+
+    console.log(props.location.state.movieTitle)
     return (
         <div>
             <Navbar></Navbar>
@@ -15,6 +18,9 @@ function ResultsCard(props) {
                     <Row>
                         <ResultsSidebar></ResultsSidebar>
                         <div className="resultContainer col-sm-10">
+                            <div className="title">
+                                {movieResultTitle}
+                            </div>
                             <div className="col-sm-4">
                                 <img src="" className="resultCardImage" alt="..."></img>
                             </div>

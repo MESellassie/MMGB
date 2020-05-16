@@ -8,6 +8,9 @@ import OmdbAPI from "../../../utils/OmdbAPI";
 import igdbAPI from "../../../utils/igdbAPI";
 import HappyResults from "../Results/HappyResults";
 import rawgAPI from "../../../utils/rawgAPI";
+import BooksAPI from "../../../utils/BooksAPI";
+import happySeeds from "../pages/happyTitles";
+import { Link } from "react-router-dom";
 
 class Sidebar extends Component {
 
@@ -19,19 +22,20 @@ class Sidebar extends Component {
             gameResult: {},
             musicResult: {},
             page: "home",
+            book: {}
 
         };
     }
 
     componentDidMount() {
         this.getMovie();
-        this.getGame();
+        // this.getGame();
+        this.getBook();
     }
 
     getMovie() {
         OmdbAPI.random()
             .then(res => {
-
                 console.log(res.cover);
                 console.log(res.data.Response);
                 console.log(res.data);
@@ -46,10 +50,10 @@ class Sidebar extends Component {
             .catch(err => console.log(err));
     }
 
-    getGame() {
-        rawgAPI()
+    // getGame() {
+    //     rawgAPI()
 
-    }
+    // }
 
     // getGame() {
 
@@ -63,11 +67,27 @@ class Sidebar extends Component {
     //         .catch(err => console.log(err));
     // }
 
-    //getBook() {
-    //do some stuff then setState once we get a response we like
-    // API.random()
-    // .then(res => {
-    //   console.log(res.data);
+    
+    getBook() {
+        BooksAPI.random()
+                .then(res => {
+                    let book = res.data;
+                    console.log(book);
+                    if (res.data.Response == "False") {
+                        this.getBook();
+                    }
+                    else {
+                        this.setState({ book: book.items[0].volumeInfo.imageLinks.smallThumbnail})
+                    } 
+
+                    // this.setState({
+                    //     book: book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
+                    // })
+                    console.log(book.items[0].volumeInfo.title);
+                    // I know this is giving me the thumbnail
+                    console.log(book.items[0].volumeInfo.imageLinks.smallThumbnail)}
+                    ) 
+                }
 
     // })
     // .catch(err => console.log(err));
@@ -99,13 +119,24 @@ class Sidebar extends Component {
                                 <br></br>
                                 <Card></Card>
                                 <br></br>
-                                <Card></Card>
+                                <Card
+                                    imageSrc={this.state.book}
+                                ></Card>
                                 <br></br>
 
+                                <Link to={{
+                                    pathname: `/results`,
+                                    state: {
+                                        movieTitle: this.state.movieResult.Title,
+                                        movieImage: this.state.movieResult.Poster,
+                                    }
+                                    }}
+                                    >
                                 <Card
                                     title={this.state.movieResult.Title}
                                     imageSrc={this.state.movieResult.Poster}
                                 ></Card>
+                                </Link>
                             </div>
                             <Body
                                 handlePageChange={this.handlePageChange}
