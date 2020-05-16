@@ -7,6 +7,7 @@ import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
 import HappyResults from "../Results/HappyResults";
 import rawgAPI from "../../../utils/rawgAPI";
+//import igdbAPI from "../../../utils/igdbAPI;"
 
 class Sidebar extends Component {
 
@@ -45,7 +46,7 @@ class Sidebar extends Component {
             .catch(err => console.log(err));
     }
 
-    getGame() {
+    getGame(){
         rawgAPI()
 
     }

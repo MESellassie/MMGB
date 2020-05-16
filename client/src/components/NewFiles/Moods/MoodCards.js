@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import happyTitles from "../pages/happyTitles";
 import OMDBAPI from "../../../utils/OmdbAPI";
 import BOOKSAPI from "../../../utils/googleAPI";
-// import IGDAPI from "../../../utils/igdbAPI";
+ import RAWGAPI from "../../../utils/rawgAPI";
 // import MUSICAPI from "../../../utils/spodifyAPI";
 // import axios from "axios";
 
@@ -41,45 +41,57 @@ class MoodCards extends Component {
                 //moodObject = relaxedTitles;
         }
         console.log("getRandomValuess:moodObject", moodObject)
-        //TEST: DELETE ME WHEN ALL FUNCTIONS ARE DEFINED
-        if (moodObject) {
+        // //TEST: DELETE ME WHEN ALL FUNCTIONS ARE DEFINED
+        // if (moodObject) {
            
-            OMDBAPI.getMovieData(moodObject.getRandomMovie())
-               .then(res => {
-                   this.setState({movie: res.data})
-                   console.log({movie: res.data})
-               })
-        }
-        //END TEST
+        //     rawgAPI.getGameData(moodObject.getRandomGame())
+        //        .then(res => {
+        //            this.setState({game: res.data.result})
+        //            console.log({game: res.data.result})
+        //        })
+
+        // }
+        // //END TEST
 
         //UNCOMMENT THIS WHEN WE HAVE ALL OF OUR FUNCTIONS DEFINED
-        // if (moodObject) {
-        //     let movie, game, book, song;
-        //    OMDBAPI.getMovieData(moodObject.getRandomMovie())
-        //    .then(res => {
-        //         movie = res.data;
-        //         return BOOKSAPI.getBookData(moodObject.getRandomBook())
-        //         .then(res => {
-        //             book = res.data;
-        //             return IGDAPI.getGameData(moodObject.getRandomGame())
-        //             .then(res => {
-        //                 game = res.data;
-        //                 return MUSICAPI.getMusicData(moodObject.getRandomSong())
-        //                 .then(res => {
-        //                     song = res.data;
-        //                     this.setState({
-        //                         movie, 
-        //                         book,
-        //                         game,
-        //                         song
-        //                     })
-        //                 })
-        //             })
-        //         })
-        //    })
-        //    .catch(err => console.log(err));
-        //    
-        // }
+if (moodObject) {
+            let movie, game, book, song;
+           OMDBAPI.getMovieData(moodObject.getRandomMovie())
+           .then(res => {
+                movie = res.data;
+                console.log(movie);
+                return BOOKSAPI.getBookData(moodObject.getRandomBook())
+                .then(res => {
+                    book = res.data;
+                    console.log(book);
+                    // Title
+                    console.log(book.items[0].volumeInfo.title);
+                    // I know this is giving me the thumbnail
+                    console.log(book.items[0].volumeInfo.imageLinks.smallThumbnail)
+                    return RAWGAPI.getGameData(moodObject.getRandomGame())
+                    .then(res => {
+                        game = res.data;
+                    //     return MUSICAPI.getMusicData(moodObject.getRandomSong())
+                    //     .then(res => {
+                    //         song = res.data;
+                            this.setState({
+                                movie, 
+                                book: book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
+                                game,
+                                song
+                            })
+                         })
+                    // })
+                    // this.setState({
+                    //     movie, 
+                    //     book: book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
+                    //     game,
+                    //     song
+                    // })
+                })
+           })
+           .catch(err => console.log(err));
+        }
     }
 
     // const [movieState, setMovieState] = useState({
