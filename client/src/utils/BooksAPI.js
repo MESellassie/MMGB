@@ -7,7 +7,6 @@ export default {
   random: function() {
     let randomVowel = vowels[Math.floor(Math.random()*vowels.length) + 1];
     let randomConsonant = consonants[Math.floor(Math.random()*consonants. length) +1];
-    let randomYear = Math.floor(Math.random()*20 + 2000);
         //make the order of vowel and consonant random too:
         let firstLetter, secondLetter;
     if (Math.random() > .5 ) {
@@ -18,11 +17,13 @@ export default {
       secondLetter = randomVowel;
     }
     
-    let randomParams = `&t=${firstLetter+secondLetter}&y=${randomYear}`;
+    let randomParams = `&t=${firstLetter+secondLetter}`;
+    console.log(BASEURL + randomParams);
+    console.log("RIGHT HERE!!!!!");
     return axios.get(BASEURL + randomParams);
   },
 
-  getMovieData: function(title) {
+  getBookData: function(title) {
     return axios.get(BASEURL + title);
   }
 
