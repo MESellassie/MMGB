@@ -1,6 +1,6 @@
 const happySeeds = {
   gameTitles: [
-    "Halo", "Zelda", "Metroid", "Mario",
+    "Zelda", "Metroid", "Mario", "Castlevania",
   ],
 
   movieTitles: [

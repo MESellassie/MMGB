@@ -182,7 +182,6 @@ class MoodCards extends Component {
 
                     <Link to="/results">
                         <div className="col mb-4" id="card4">
-                            <img src="#" className="card-img-top" alt="..."></img>
                             <h5 className="card-title">BOOKS</h5>
                             <Card
                                 title={this.state.book}

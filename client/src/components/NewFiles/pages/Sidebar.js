@@ -58,13 +58,15 @@ class Sidebar extends Component {
                 console.log("GAME RESPONSE")
                 console.log(game);
 
-                if (res.data.Response == "False") {
-                    this.getGame();
-                }
-                else {
-                    console.log(game.background_image)
-                    this.setState({ game:game.background_image })
-                }
+                this.setState({game: game.background_image})
+
+                // if (res.data.Response == "False") {
+                //     this.getGame();
+                // }
+                // else {
+                //     console.log(game.background_image)
+                //     this.setState({ game:game.background_image })
+                // }
             }
 
             )
