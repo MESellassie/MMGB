@@ -8,8 +8,7 @@ export default {
   random: function() {
     let randomTitle = bookTitles[Math.floor(Math.random()*bookTitles.length) + 1];
     //make the order of vowel and consonant random too:
-    console.log("LOOK HERE")
-    console.log(BASEURL + randomTitle)
+
 
     return axios.get(BASEURL + randomTitle);
   },

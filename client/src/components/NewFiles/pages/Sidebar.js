@@ -5,6 +5,7 @@ import Card from "./Card";
 import Body from "./Body";
 import { render } from "react-dom";
 import OmdbAPI from "../../../utils/OmdbAPI";
+import deezerAPI from "../../../utils/deezerAPI";
 import HappyResults from "../Results/HappyResults";
 import rawgAPI from "../../../utils/rawgAPI";
 import BooksAPI from "../../../utils/BooksAPI";
@@ -30,14 +31,13 @@ class Sidebar extends Component {
         this.getMovie();
         this.getGame();
         this.getBook();
+        this.getMusic();
     }
 
     getMovie() {
         OmdbAPI.random()
             .then(res => {
-                console.log(res.cover);
-                console.log(res.data.Response);
-                console.log(res.data);
+
                 if (res.data.Response == "False" ||
                     (res.data.Language && !res.data.Language.toUpperCase().includes("ENGLISH"))) {
                     this.getMovie();
@@ -54,8 +54,6 @@ class Sidebar extends Component {
         // rawgAPI.random()
             .then(res => {
                 let game = res.data;
-                console.log("GAME RESPONSE")
-                console.log(game);
 
                 this.setState({game: game.background_image})
 
@@ -71,57 +69,30 @@ class Sidebar extends Component {
             )
     }
 
-    // getGame() {
-
-
-    //     //do some stuff then setState once we get a response we like
-    //     igdbAPI.getGame()
-    //         .then(res => {
-    //             console.log(res);
-    //             //this.getGame()
-    //         })
-    //         .catch(err => console.log(err));
-    // }
+    getMusic() {
+        deezerAPI.getSongData(happyTitles.getRandomSong())
+            .then(res => {
+                let song = res.data;
+                console.log("HERE IS THE SONG INFO!!!!")
+                console.log(song)
+ 
+                this.setState({ song: song.album.cover_medium})
+            })
+            .catch(err => console.log(err));
+    }
 
 
     getBook() {
-        BooksAPI.random()
+        BooksAPI.getBookData(happyTitles.getRandomBook())
             .then(res => {
                 let book = res.data;
                 console.log(book);
-                if (res.data.Response == "False") {
-                    this.getBook();
-                }
-                else {
+                
                     this.setState({ book: book.items[0].volumeInfo.imageLinks.smallThumbnail })
                 }
-
-                // this.setState({
-                //     book: book.image = book.items[0].volumeInfo.imageLinks.smallThumbnail,
-                // })
-                console.log(book.items[0].volumeInfo.title);
-                // I know this is giving me the thumbnail
-                console.log(book.items[0].volumeInfo.imageLinks.smallThumbnail)
-            }
             )
     }
 
-    // })
-    // .catch(err => console.log(err));
-    //}
-
-    //  getMusic(){
-    //do some stuff then setState once we get a response we like
-    // API.random()
-    //  .then(res => {
-    //      console.log(res.data);
-
-    //  })
-    //  .catch(err => console.log(err));
-    // }
-    // handlePageChange = (page) => {
-    //     this.setState({ page: page })
-    // }
 
     render() {
         return (
@@ -132,7 +103,18 @@ class Sidebar extends Component {
                         <div className="col-sm-2 shadow" id="sidebar">
                             <p className="plug">Plug of the Day</p>
                             <br></br>
-                            <Card></Card>
+                            <Link to={{
+                                pathname: `/results`,
+                                state: {
+                                    songTitle: this.state.movieResult.Title,
+                                    songImage: this.state.movieResult.Poster,
+                                }
+                            }}
+                            >
+                            <Card
+                                imageSrc={this.state.song}
+                            ></Card>
+                            </Link>
                             <br></br>
                             <Card
                                 imageSrc={this.state.game}
