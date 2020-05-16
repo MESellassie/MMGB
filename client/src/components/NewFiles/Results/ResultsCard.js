@@ -7,9 +7,6 @@ import Footer from "../pages/Footer";
 import ResultsSidebar from "../Results/ResultsSidebar";
 
 function ResultsCard(props) {
-    const movieResultTitle= props.location.state.movieTitle;
-
-    console.log(props.location.state.movieTitle)
     return (
         <div>
             <Navbar></Navbar>
@@ -17,6 +14,7 @@ function ResultsCard(props) {
                 <Jumbotron>
                     <Row>
                         <ResultsSidebar></ResultsSidebar>
+                        {/* <div className="container resultContainer col-sm-10">
                             <div className="col-sm-4">
                                 <img src="https://github.com/MESellassie/MMGB/blob/master/client/public/images/blackPanter.jpg?raw=true" className="resultCardImage" alt="..."></img>
                             </div>
