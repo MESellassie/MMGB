@@ -1,4 +1,4 @@
-const pumpedSeeds = {
+const pumpedTitles = {
     gameTitles: [
         "3498", "22511", "28", "58175", "3990", "58829", "58134", "282825", "259801", "3287"
     ],
@@ -24,5 +24,4 @@ const pumpedSeeds = {
         return this.musicTitles[Math.floor(Math.random() * this.musicTitles.length) + 1]
     }
 }
-
-export default pumpedSeeds;
+export default pumpedTitles;

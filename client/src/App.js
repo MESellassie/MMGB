@@ -6,6 +6,10 @@ import GloomyResults from "./components/NewFiles/Results/GloomyResults";
 import PumpedResults from "./components/NewFiles/Results/PumpedResults";
 import RelaxedResults from "./components/NewFiles/Results/RelaxedResults";
 import ResultsCard from "./components/NewFiles/Results/ResultsCard";
+import ResultsPageExample from "./components/NewFiles/Results/ResultsPageExample";
+import MusicResultsCard from "./components/NewFiles/Results/MusicResults";
+import GameResultsCard from "./components/NewFiles/Results/GameResults";
+import BookResultsCard from './components/NewFiles/Results/BookResults';
 
 
 import Navbar from "./components/Navbar";
@@ -28,6 +32,10 @@ class App extends Component {
             <Route exact path="/pumped" component={PumpedResults} />
             <Route exact path="/relaxed" component={RelaxedResults} />
             <Route exact path="/results" component={ResultsCard} />
+            <Route exact path="/bookresults" component={BookResultsCard} />
+            <Route exact path="/gameresults" component={GameResultsCard} />
+            <Route exact path="/musicresults" component={MusicResultsCard} />
+            <Route exact path="/resultsex" component={ResultsPageExample} />
         </div>
       </Router>
       
