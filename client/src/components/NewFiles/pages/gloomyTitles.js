@@ -1,6 +1,6 @@
 const gloomySeeds = {
     gameTitles: [
-        "Escape From Tarkov",
+        "Gris", "Telltale's+The+Walking+Dead+Series", "Brothers:+A+Tale+Of+Two+Sons", "Undertale", "The+Last+Of+Us", "Life+is+Strange", "That+Dragon", "Cancer", "Gone+Home", "Thomas+was+alone"
     ],
     movieTitles: [
         "Despicable+Me"

@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 import Card from "../pages/Card";
 import { Link } from "react-router-dom";
 import happyTitles from "../pages/happyTitles";
+//import glommyTitles from "../pages/gloomyTitles";
 import OMDBAPI from "../../../utils/OmdbAPI";
 import BOOKSAPI from "../../../utils/BooksAPI";
 import rawgAPI from "../../../utils/rawgAPI";
@@ -36,7 +37,7 @@ class MoodCards extends Component {
             case "happy":
                 moodObject = happyTitles;
             case "gloomy":
-            // moodObject = gloomyTitles;
+                //moodObject = gloomyTitles;
             case "pumped":
             // moodObject = pumpedTitles;
             case "relaxed":
